@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeloBerlin – Lagerhaltung & Zielkonflikte</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAV - fixierte Fortschrittsleiste
+  ═══════════════════════════════════════════════════════ -->
+  <nav id="top-nav" aria-label="Seitennavigation">
+    <div id="progress-bar"></div>
+    <ul class="nav-links">
+      <li><a href="#hero"           class="nav-link active" data-section="hero">Einführung</a></li>
+      <li><a href="#conflict-intro" class="nav-link"        data-section="conflict-intro">Zielkonflikt</a></li>
+      <li><a href="#abc"            class="nav-link"        data-section="abc">ABC-Analyse</a></li>
+      <li><a href="#xyz"            class="nav-link"        data-section="xyz">XYZ-Analyse</a></li>
+      <li><a href="#matrix"         class="nav-link"        data-section="matrix">Matrix</a></li>
+      <li><a href="#melde"          class="nav-link"        data-section="melde">Meldebestand</a></li>
+      <li><a href="#fazit"          class="nav-link"        data-section="fazit">Fazit</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 1 - Hero / VeloBerlin vorstellen
+    ═══════════════════════════════════════════════════════ -->
+    <section id="hero" class="section section--hero">
+      <div class="hero-bg-circles" aria-hidden="true">
+        <span class="circle circle--1"></span>
+        <span class="circle circle--2"></span>
+        <span class="circle circle--3"></span>
+      </div>
+      <div class="container">
+        <div class="hero-badge">E-Learning · Produktionswirtschaft & Logistik</div>
+        <h1 class="hero-title">
+          <span class="hero-icon" aria-hidden="true">🚲</span>
+          Velo<span class="accent">Berlin</span>
+        </h1>
+        <p class="hero-subtitle">Wie ein Fahrradladen lernt, seinen Lagerbestand zu beherrschen</p>
+
+        <div class="hero-cards">
+          <div class="hero-card">
+            <div class="hero-card__icon" aria-hidden="true">📊</div>
+            <div class="hero-card__label">Methode 1</div>
+            <div class="hero-card__title">ABC-Analyse</div>
+            <div class="hero-card__desc">Klassifizierung nach Wertanteil</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card__icon" aria-hidden="true">📈</div>
+            <div class="hero-card__label">Methode 2</div>
+            <div class="hero-card__title">XYZ-Analyse</div>
+            <div class="hero-card__desc">Klassifizierung nach Vorhersagegenauigkeit</div>
+          </div>
+          <div class="hero-card hero-card--highlight">
+            <div class="hero-card__icon" aria-hidden="true">⚡</div>
+            <div class="hero-card__label">Methode 3</div>
+            <div class="hero-card__title">Meldebestand</div>
+            <div class="hero-card__desc">Bewusste Steuerung des Zielkonflikts</div>
+          </div>
+        </div>
+
+        <!-- VeloBerlin Steckbrief -->
+        <div class="company-card">
+          <div class="company-card__header">
+            <span class="company-card__icon" aria-hidden="true">🏪</span>
+            <div>
+              <div class="company-card__name">VeloBerlin GmbH</div>
+              <div class="company-card__tagline">Fahrradladen & Werkstatt · Berlin-Mitte</div>
+            </div>
+          </div>
+          <div class="company-card__facts">
+            <div class="fact">
+              <span class="fact__value">9</span>
+              <span class="fact__label">Lagerartikel</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">100.960 €</span>
+              <span class="fact__label">Jahresverbrauchswert</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">3</span>
+              <span class="fact__label">Methoden</span>
+            </div>
+            <div class="fact">
+              <span class="fact__value">1</span>
+              <span class="fact__label">Zielkonflikt</span>
+            </div>
+          </div>
+          <p class="company-card__desc">
+            VeloBerlin verkauft Fahrräder, E-Bikes und Ersatzteile und betreibt eine eigene Werkstatt.
+            Das Ersatzteillager umfasst 9 Artikel, von günstigen Schrauben bis hin zum teuren E-Bike-Akku.
+            Diese E-Learning-Einheit zeigt, wie drei Methoden der Produktionswirtschaft helfen,
+            das Lager intelligent zu steuern.
+          </p>
+        </div>
+
+        <a href="#abc" class="btn btn--primary btn--large scroll-cta">
+          Los geht's
+          <span class="btn-arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 2 - Zielkonflikt (Definition & Einführung)
+    ═══════════════════════════════════════════════════════ -->
+    <section id="conflict-intro" class="section section--warm">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">Das zentrale Problem</div>
+          <h2 class="section-title">Der logistische Zielkonflikt</h2>
+          <p class="section-subtitle">Bestand vs. Lieferfähigkeit</p>
+        </div>
+
+        <!-- Zwei Zielrichtungen (nach Vorlesungsfolie) -->
+        <div class="ci-directions">
+          <div class="ci-direction ci-direction--left">
+            <div class="ci-direction__icon" aria-hidden="true">📦</div>
+            <div class="ci-direction__label">Ziel 1</div>
+            <div class="ci-direction__title">Kosten minimieren</div>
+            <div class="ci-direction__desc">Bestände niedrig halten, Kapitalbindung vermeiden, Lagerkosten senken</div>
+          </div>
+          <div class="ci-vs" aria-hidden="true">⚡</div>
+          <div class="ci-direction ci-direction--right">
+            <div class="ci-direction__icon" aria-hidden="true">🚚</div>
+            <div class="ci-direction__label">Ziel 2</div>
+            <div class="ci-direction__title">Leistung erfüllen</div>
+            <div class="ci-direction__desc">Hohe Lieferfähigkeit sicherstellen, Kunden sofort beliefern können</div>
+          </div>
+        </div>
+
+        <!-- Definition -->
+        <div class="theory-block">
+          <div class="theory-block__tag">Definition</div>
+          <p class="theory-block__text">
+            Ein <strong>Zielkonflikt</strong> entsteht, wenn zwei legitime Unternehmensziele sich gegenseitig
+            behindern: Ein höherer Bestand verbessert die Lieferfähigkeit, erhöht aber gleichzeitig die
+            Kapitalbindung. Ein niedrigerer Bestand spart Kosten, gefährdet aber die Verfügbarkeit.
+            <br><br>
+            Abteilungsübergreifende Kompromisse sind notwendig, eine isolierte Optimierung
+            eines einzelnen Ziels schadet dem anderen.
+          </p>
+        </div>
+
+        <!-- Kurve Bestand ↔ Lieferfähigkeit (statisch, aus Vorlesung) -->
+        <div class="ci-curve-wrap">
+          <canvas id="ci-curve-canvas" width="600" height="280" aria-label="Exponentialkurve Bestand vs. Lieferfähigkeit"></canvas>
+          <p class="ci-curve-caption">
+            Die Kurve ist nicht linear; die letzten Prozentpunkte Richtung 100 % Lieferfähigkeit
+            kosten überproportional viel Bestand. 100 % sind in der Praxis kaum erreichbar.
+          </p>
+        </div>
+
+        <!-- Teaser VeloBerlin -->
+        <div class="ci-teaser">
+          <div class="ci-teaser__icon" aria-hidden="true">🚲</div>
+          <div>
+            <div class="ci-teaser__title">Genau diesen Konflikt zeigen wir jetzt an VeloBerlin</div>
+            <p class="ci-teaser__text">
+              Mit <strong>ABC-Analyse</strong> (Wert), <strong>XYZ-Analyse</strong> (Planbarkeit)
+              und dem <strong>Meldebestandsverfahren</strong> wird der Zielkonflikt
+              nicht aufgelöst, sondern bewusst gesteuert.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 3 - ABC-Analyse
+    ═══════════════════════════════════════════════════════ -->
+    <section id="abc" class="section section--light">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">Methode 1</div>
+          <h2 class="section-title">ABC-Analyse</h2>
+          <p class="section-subtitle">Welche Artikel binden das meiste Kapital?</p>
+        </div>
+
+        <!-- Theorie-Block -->
+        <div class="theory-block">
+          <div class="theory-block__tag">Definition</div>
+          <p class="theory-block__text">
+            Die ABC-Analyse klassifiziert Artikel nach ihrem <strong>wertmäßigen Anteil am Gesamtverbrauchswert</strong>
+            (Menge × Preis) - und wirklich nach <em>nichts anderem</em>.
+          </p>
+          <div class="theory-classes">
+            <div class="theory-class theory-class--a">
+              <span class="theory-class__label">A</span>
+              <span class="theory-class__desc">Hoher Wertanteil<br><small>~75–80 % kumuliert</small></span>
+            </div>
+            <div class="theory-class theory-class--b">
+              <span class="theory-class__label">B</span>
+              <span class="theory-class__desc">Mittlerer Wertanteil<br><small>~15–20 % kumuliert</small></span>
+            </div>
+            <div class="theory-class theory-class--c">
+              <span class="theory-class__label">C</span>
+              <span class="theory-class__desc">Geringer Wertanteil<br><small>~5–10 % kumuliert</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vorgehen -->
+        <div class="steps-row">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div class="step__text">Verbrauchswert je Artikel berechnen<br><small>Menge × Preis</small></div>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div class="step__text">Absteigend sortieren</div>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div class="step__text">Kumulierten Anteil berechnen</div>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div class="step__text">Klassengrenzen anwenden</div>
+          </div>
+        </div>
+
+        <!-- Interaktive Tabelle -->
+        <div class="subsection-title">Anwendung: VeloBerlin Ersatzteillager</div>
+        <p class="subsection-hint">Klicke auf einen Artikel, um ihn im Diagramm hervorzuheben.</p>
+
+        <div class="abc-layout">
+          <div class="abc-table-wrap">
+            <table class="data-table" id="abc-table" aria-label="ABC-Analyse VeloBerlin">
+              <thead>
+                <tr>
+                  <th>Artikel</th>
+                  <th class="num">Preis (€)</th>
+                  <th class="num">Menge/J.</th>
+                  <th class="num">Wert (€)</th>
+                  <th class="num">Anteil</th>
+                  <th class="num">Kumuliert</th>
+                  <th>Klasse</th>
+                </tr>
+              </thead>
+              <tbody id="abc-table-body">
+                <!-- wird von abc.js befüllt -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pareto-Diagramm -->
+          <div class="chart-wrap">
+            <div class="chart-title">Pareto-Diagramm</div>
+            <canvas id="abc-chart" width="480" height="320" aria-label="Pareto-Diagramm ABC-Analyse"></canvas>
+            <div class="chart-legend">
+              <span class="legend-item legend-item--a">A-Artikel</span>
+              <span class="legend-item legend-item--b">B-Artikel</span>
+              <span class="legend-item legend-item--c">C-Artikel</span>
+              <span class="legend-item legend-item--cum">Kumulierter Anteil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ergebnis-Karten -->
+        <div class="result-cards" id="abc-result-cards">
+          <!-- wird von abc.js befüllt -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 3 - XYZ-Analyse
+    ═══════════════════════════════════════════════════════ -->
+    <section id="xyz" class="section section--dark">
+      <div class="container">
+
+        <div class="section-header section-header--light">
+          <div class="section-badge section-badge--dark">Methode 2</div>
+          <h2 class="section-title">XYZ-Analyse</h2>
+          <p class="section-subtitle">Wie gut lässt sich der Bedarf vorhersagen?</p>
+        </div>
+
+        <!-- Theorie -->
+        <div class="theory-block theory-block--dark">
+          <div class="theory-block__tag">Definition</div>
+          <p class="theory-block__text">
+            Die XYZ-Analyse (auch <strong>RSU-Analyse</strong>) klassifiziert Artikel nach der
+            <strong>Vorhersagegenauigkeit ihres Verbrauchs</strong>.
+            Je schwankender der Bedarf, desto schwerer zu disponieren.
+          </p>
+        </div>
+
+        <!-- X/Y/Z Erklärung mit Minicharts -->
+        <div class="xyz-patterns">
+          <div class="xyz-pattern" data-class="X">
+            <div class="xyz-pattern__header xyz-pattern__header--x">
+              <span class="xyz-pattern__badge">X</span>
+              <span class="xyz-pattern__name">Regelmäßig</span>
+            </div>
+            <canvas class="xyz-mini-chart" id="chart-x" width="360" height="120" aria-label="X-Teil Verbrauchsmuster"></canvas>
+            <p class="xyz-pattern__desc">Gleichmäßiger Verbrauch, hohe Vorhersagegenauigkeit</p>
+          </div>
+          <div class="xyz-pattern" data-class="Y">
+            <div class="xyz-pattern__header xyz-pattern__header--y">
+              <span class="xyz-pattern__badge">Y</span>
+              <span class="xyz-pattern__name">Schwankend</span>
+            </div>
+            <canvas class="xyz-mini-chart" id="chart-y" width="360" height="120" aria-label="Y-Teil Verbrauchsmuster"></canvas>
+            <p class="xyz-pattern__desc">Größere Schwankungen, mittlere Vorhersagegenauigkeit</p>
+          </div>
+          <div class="xyz-pattern" data-class="Z">
+            <div class="xyz-pattern__header xyz-pattern__header--z">
+              <span class="xyz-pattern__badge">Z</span>
+              <span class="xyz-pattern__name">Unregelmäßig</span>
+            </div>
+            <canvas class="xyz-mini-chart" id="chart-z" width="360" height="120" aria-label="Z-Teil Verbrauchsmuster"></canvas>
+            <p class="xyz-pattern__desc">Stark schwankender Verbrauch, geringe Vorhersagegenauigkeit</p>
+          </div>
+        </div>
+
+        <!-- XYZ-Tabelle -->
+        <div class="subsection-title subsection-title--light">Ergebnis: VeloBerlin Artikel</div>
+        <div class="xyz-table-wrap">
+          <table class="data-table data-table--dark" id="xyz-table" aria-label="XYZ-Klassifikation VeloBerlin">
+            <thead>
+              <tr>
+                <th>Artikel</th>
+                <th>XYZ-Klasse</th>
+                <th>Begründung</th>
+              </tr>
+            </thead>
+            <tbody id="xyz-table-body">
+              <!-- wird von xyz.js befüllt -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 4 - Kombinierte Matrix + Zielkonflikt
+    ═══════════════════════════════════════════════════════ -->
+    <section id="matrix" class="section section--light">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">Kombination</div>
+          <h2 class="section-title">ABC/XYZ-Matrix</h2>
+          <p class="section-subtitle">Beide Analysen zusammengeführt: ein Zielkonflikt wird sichtbar</p>
+        </div>
+
+        <!-- Matrix -->
+        <div class="matrix-wrap">
+          <table class="matrix-table" id="matrix-table" aria-label="Kombinierte ABC-XYZ-Matrix">
+            <thead>
+              <tr>
+                <th class="matrix-corner"></th>
+                <th class="matrix-head-abc">A <small>Hoher Wert</small></th>
+                <th class="matrix-head-abc">B <small>Mittlerer Wert</small></th>
+                <th class="matrix-head-abc">C <small>Geringer Wert</small></th>
+              </tr>
+            </thead>
+            <tbody id="matrix-body">
+              <!-- wird von matrix.js befüllt -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Zielkonflikt Spotlight -->
+        <div class="conflict-spotlight" id="conflict-spotlight">
+          <div class="conflict-spotlight__header">
+            <span class="conflict-spotlight__icon" aria-hidden="true">⚡</span>
+            <div>
+              <div class="conflict-spotlight__badge">Zielkonflikt</div>
+              <div class="conflict-spotlight__title">Der E-Bike-Akku ist ein AZ-Artikel</div>
+            </div>
+          </div>
+
+          <div class="conflict-sides">
+            <div class="conflict-side conflict-side--a">
+              <div class="conflict-side__class">A</div>
+              <div class="conflict-side__label">Hoher Wertanteil</div>
+              <div class="conflict-side__arrow">→</div>
+              <div class="conflict-side__goal">Bestand <strong>niedrig</strong> halten<br><small>Kapitalbindung vermeiden</small></div>
+            </div>
+            <div class="conflict-vs">vs.</div>
+            <div class="conflict-side conflict-side--z">
+              <div class="conflict-side__class">Z</div>
+              <div class="conflict-side__label">Unregelmäßiger Bedarf</div>
+              <div class="conflict-side__arrow">→</div>
+              <div class="conflict-side__goal">Lieferfähigkeit <strong>hoch</strong> halten<br><small>Kunden nicht warten lassen</small></div>
+            </div>
+          </div>
+
+          <div class="conflict-resolution">
+            <p>
+              Dieser Zielkonflikt lässt sich <strong>nicht auflösen</strong> - er muss bewusst
+              <em>gesteuert und abgewogen</em> werden. Das Meldebestandsverfahren ist das Instrument dafür.
+              Genau diesen Zusammenhang haben wir <a href="#conflict-intro" class="inline-link">zu Beginn abstrakt eingeführt</a>,
+              hier wird er am konkreten Artikel sichtbar.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 5 - Meldebestand + Live-Rechner
+    ═══════════════════════════════════════════════════════ -->
+    <section id="melde" class="section section--dark">
+      <div class="container">
+
+        <div class="section-header section-header--light">
+          <div class="section-badge section-badge--dark">Methode 3</div>
+          <h2 class="section-title">Meldebestandsverfahren</h2>
+          <p class="section-subtitle">Den Zielkonflikt bewusst steuern statt ignorieren</p>
+        </div>
+
+        <!-- Theorie-Block -->
+        <div class="theory-block theory-block--dark">
+          <div class="theory-block__tag">Definition</div>
+          <p class="theory-block__text">
+            Das Meldebestandsverfahren ist eines von drei Bestellverfahren der Vorratsbeschaffung.
+            Das auslösende Moment der Bestellung ist der <strong>Bestand</strong>, nicht der Verbrauch
+            oder ein fester Zeitpunkt.
+          </p>
+          <div class="formula-row">
+            <div class="formula-card">
+              <div class="formula-card__label">Meldebestand</div>
+              <div class="formula-card__formula">
+                M = V<sub>WBZ</sub> + S
+              </div>
+              <div class="formula-card__legend">
+                V<sub>WBZ</sub> = Verbrauch während WBZ<br>
+                S = Sicherheitsbestand<br>
+                WBZ = Wiederbeschaffungszeit
+              </div>
+            </div>
+            <div class="formula-card formula-card--highlight">
+              <div class="formula-card__label">Anwendung E-Bike-Akku</div>
+              <div class="formula-card__formula">
+                M = (2 × 4) + 8 = <strong>16 Stück</strong>
+              </div>
+              <div class="formula-card__legend">
+                Verbrauch: 2 Stk/Woche<br>
+                WBZ: 4 Wochen (Import Asien)<br>
+                Sicherheitsbestand: 8 Stk
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live-Rechner -->
+        <div class="calculator-section">
+          <div class="calculator-header">
+            <span class="calculator-header__icon" aria-hidden="true">🔋</span>
+            <div>
+              <div class="calculator-header__title">Live-Rechner: E-Bike-Akku</div>
+              <div class="calculator-header__subtitle">Schiebe den Regler und erlebe, was Lieferfähigkeit kostet</div>
+            </div>
+            <button class="info-btn" id="model-info-btn" aria-label="Hinweis zur Modellierung" aria-expanded="false">i</button>
+          </div>
+          <div class="info-tooltip" id="model-info-tooltip" role="tooltip" hidden>
+            Eigene Modellierung ohne empirische Verbrauchsdaten, kalibriert auf 90 % Lieferfähigkeit → 8 Stück Sicherheitsbestand, bildet den in der Vorlesung beschriebenen exponentiellen Zusammenhang ab.
+          </div>
+
+          <div class="calculator-body">
+            <div class="slider-section">
+              <label for="service-slider" class="slider-label">
+                Gewünschte Lieferfähigkeit:
+                <strong id="slider-value" class="slider-value-display">90 %</strong>
+              </label>
+              <div class="slider-track-wrap">
+                <span class="slider-track-label">50 %</span>
+                <input
+                  type="range"
+                  id="service-slider"
+                  min="50" max="99.5" step="0.5"
+                  value="90"
+                  class="service-slider"
+                  aria-label="Gewünschte Lieferfähigkeit in Prozent"
+                >
+                <span class="slider-track-label">99,5 %</span>
+              </div>
+            </div>
+
+            <div class="calculator-results" id="calc-results">
+              <div class="calc-result">
+                <div class="calc-result__icon" aria-hidden="true">📦</div>
+                <div class="calc-result__label">Sicherheitsbestand</div>
+                <div class="calc-result__value" id="res-safety">8 Stück</div>
+              </div>
+              <div class="calc-result">
+                <div class="calc-result__icon" aria-hidden="true">🔔</div>
+                <div class="calc-result__label">Meldebestand</div>
+                <div class="calc-result__value" id="res-melde">16 Stück</div>
+              </div>
+              <div class="calc-result calc-result--money">
+                <div class="calc-result__icon" aria-hidden="true">💶</div>
+                <div class="calc-result__label">Kapitalbindung</div>
+                <div class="calc-result__value" id="res-capital">3.600 €</div>
+              </div>
+            </div>
+
+            <!-- Exponentialkurve -->
+            <div class="curve-wrap">
+              <div class="curve-title">Lieferfähigkeit vs. Kapitalbindung</div>
+              <canvas id="curve-chart" width="600" height="280" aria-label="Exponentialkurve Lieferfähigkeit und Kapitalbindung"></canvas>
+              <p class="curve-hint" id="curve-hint">
+                Die letzten Prozentpunkte Richtung 100 % kosten überproportional viel.
+              </p>
+            </div>
+
+            <!-- Referenztabelle -->
+            <div class="ref-table-wrap">
+              <div class="ref-table-title">Referenzwerte</div>
+              <table class="data-table data-table--dark data-table--compact" id="ref-table" aria-label="Referenzwerte Sicherheitsbestand und Kapitalbindung">
+                <thead>
+                  <tr>
+                    <th>Lieferfähigkeit</th>
+                    <th class="num">Sicherheitsbestand</th>
+                    <th class="num">Kapitalbindung</th>
+                  </tr>
+                </thead>
+                <tbody id="ref-table-body">
+                  <!-- wird von calculator.js befüllt -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 6 - Fazit
+    ═══════════════════════════════════════════════════════ -->
+    <section id="fazit" class="section section--fazit">
+      <div class="container">
+
+        <div class="section-header section-header--light">
+          <div class="section-badge section-badge--dark">Fazit</div>
+          <h2 class="section-title">Was VeloBerlin gelernt hat</h2>
+        </div>
+
+        <!-- Roter Faden -->
+        <div class="fazit-flow">
+          <div class="fazit-step">
+            <div class="fazit-step__badge">ABC</div>
+            <div class="fazit-step__text">
+              <strong>E-Bike-Akku = A-Artikel</strong><br>
+              35,7 % des gesamten Verbrauchswerts, das teuerste Teil im Lager.
+            </div>
+          </div>
+          <div class="fazit-arrow" aria-hidden="true">+</div>
+          <div class="fazit-step">
+            <div class="fazit-step__badge">XYZ</div>
+            <div class="fazit-step__text">
+              <strong>E-Bike-Akku = Z-Artikel</strong><br>
+              Schwankt stark je nach Wetter, Förderprogrammen und kurzfristigen Trends, kein festes, wiederkehrendes Muster.
+            </div>
+          </div>
+          <div class="fazit-arrow" aria-hidden="true">=</div>
+          <div class="fazit-step fazit-step--highlight">
+            <div class="fazit-step__badge">AZ ⚡</div>
+            <div class="fazit-step__text">
+              <strong>Zielkonflikt</strong><br>
+              Hoher Wert fordert niedrigen Bestand.<br>
+              Unregelmäßiger Bedarf fordert hohe Lieferfähigkeit.
+            </div>
+          </div>
+        </div>
+
+        <!-- Entscheidung -->
+        <div class="decision-card">
+          <div class="decision-card__title">
+            🎯 VeloBerlin wählt: <span class="accent">90 % Lieferfähigkeit</span>
+          </div>
+          <p class="decision-card__text">
+            Mit einem Sicherheitsbestand von 8 Stück und einem Meldebestand von 16 Stück
+            bindet VeloBerlin <strong>3.600 €</strong> Kapital, und akzeptiert bewusst,
+            dass 10 % der Nachfrage nicht sofort bedient werden können.
+          </p>
+          <p class="decision-card__text">
+            99,5 % Lieferfähigkeit wären technisch erreichbar, aber wirtschaftlich unsinnig:
+            Der Sicherheitsbestand müsste auf 18 Stück steigen: <strong>8.100 € Kapitalbindung</strong>
+            für die letzten 9,5 Prozentpunkte.
+          </p>
+          <div class="decision-card__conclusion">
+            Der Zielkonflikt wird nicht aufgelöst - er wird <strong>bewusst gesteuert</strong>.
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>VeloBerlin - E-Learning-Komponente · Produktionswirtschaft & Logistik · HTW Berlin SoSe 2026</p>
+  </footer>
+
+  <!-- Scripts (in dieser Reihenfolge: Daten zuerst) -->
+  <script src="js/data.js"></script>
+  <script src="js/abc.js"></script>
+  <script src="js/xyz.js"></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
